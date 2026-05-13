@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(20, 88, 133);
+        }
+        .main-header {
+  display: flex;
+  justify-content: center;Pushes items to the far left and right */
+  align-items: center;            /* Vertically centers the content */
+  background: linear-gradient(to bottom, rgb(158,105,228) 50%,  rgb(102, 189, 240, 0.952) 50%);
+  
+.header-left{
+    background-color: rgb(20, 88, 133);
+    border-top-right-radius: 15px;
+    width: 100%;
+    text-align: end;
+   
+} 
+.header-right {
+    background-color: rgb(113, 80, 153);
+  width: 100%;
+ border-bottom-left-radius: 15px;
+}}
+        
+        .menu {
+            
+            background-color: rgb(20, 88, 133);
+            height: 100px;
+            padding-top: 50px;
+            text-align: center;
+            }
+        .menu input {
+            background-color: rgb(124, 52, 190);
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            box-sizing: border-box; 
+            height: 40px;  
+            padding: 1rem 2rem;        
+            border-radius: 50px;
+            width: 40%;
+            vertical-align: middle;
+            justify-content: center;
+            text-align: center;
+            
+            
+        }
+
+        .menu button {
+            background-color: rgb(108, 199, 241);
+            box-sizing: border-box; 
+            height: 40px;   
+            border-radius: 50%;       
+            
+            width: 40px;
+            vertical-align: middle;
+            float:right:
+            aspect-ratio: 1;
+            justify-content: right;
+            
+            
+            
+        }
+        
+
+        
+        
+        
+        .conteudo {
+            background-color: blueviolet;
+            margin-left: 200px;
+            margin-right: 200px;
+            height: 100%;
+            
+        }
+        .conteudo button {
+            vertical-align: right;
+            float: right;
+        }
+        .scrollbar {
+            height: 400px; 
+            overflow-y: auto; 
+           
+            padding: 20px;
+            margin-top: 100px;
+        }
+            
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <header class="main-header">
+  <div class="header-left">
+    <!-- Logo or Title -->
+    <h1>Mi</h1>
+  </div>
+  <div class="header-right">
+   <h1>Auspedagem</h1>
+   
+  </div>
+</header>
+
+    <div class="menu">
+        
+            <input type="text" id="nome" name="nome" placeholder="Cliente" required minlength="3" maxlength="50"/>
+            <button> V </button>
+            <a href="cadastrodono.html">
+                <button type="button"> C</button>
+                </a>
+
+    <div class="conteudo">
+        <button>P</button>
+        <h1>Visualizador</h1>
+        <p>Quando clicar no button v aparece os dados do banco de dados no scrollbar</p>
+
+        <div class= "scrollbar">
+
+  <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required minlength="3" maxlength="50">
+            <br><br>
+
+            <label for="cpf">CPF:</label>
+            <input type="number" id="cpf" name="cpf" required maxlength="11">
+            <br><br>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required minlength="6">
+            <br><br>
+
+            <label for="telefone">Telefone:</label>
+            <input type="number" id="telefone" name="telefone" maxlength="11">
+            <br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+            <br><br>
+
+            <label for="banco">Banco:</label>
+            <input type="text" id="banco" name="banco" placeholder="Nome do Banco" required minlength="3" maxlength="50">
+            <br><br>
+
+            <label for="agencia">Agencia:</label>
+            <input type="text" id="agencia" name="agencia" placeholder="Nº Agencia" required minlength="4" maxlength="6">
+            <br><br>
+
+            <label for="conta">Conta:</label>
+            <input type="text" id="conta" name="conta" placeholder="Nº Conta" required minlength="3" maxlength="15">
+            <br><br>
+</div>
+    
+            </div>
+</body>
+</html>

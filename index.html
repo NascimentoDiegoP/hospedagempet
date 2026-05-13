@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiAuspedagem</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* 
+           O banner agora é um container Flex.
+           As duas colunas internas dividem o fundo exatamente ao meio.
+        */
+        .banner {
+            display: flex;
+            width: 100%;
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(#00bfff, #8a2be2);
+        }
+
+        /* Lado Esquerdo (Roxo) */
+        .coluna-esquerda {
+            flex: 0.47; /* Ocupa 47% */
+            background-color: #8a2be2;
+            border-top-right-radius: 15px;
+            padding: 40px 0;
+            text-align: right; /* Alinha o "Mi" para a direita, encostando no centro */
+        }
+
+        /* Lado Direito (Azul) */
+        .coluna-direita {
+            flex: 0.53; /* Ocupa 53% */
+            background-color: #00bfff;
+            border-bottom-left-radius: 15px;
+            padding: 40px 0;
+            text-align: left; /* Alinha o "Auspedagem" para a esquerda, encostando no centro */
+        }
+
+        /* Estilização do Menu */
+        nav {
+            background-color: #333;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #C9A227;
+            color: black;
+        }
+
+        .conteudo {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            min-height: 500px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    
+        /* Importante: permite que o ::before se posicione em relação a este bloco */
+            position: relative; 
+            overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+        }
+
+        /* Criando a marca d'água */
+        .conteudo::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+    
+        /* Substitua pelo caminho da sua imagem (pode ser logo de patinha, etc) */
+            background-image: url('gatoecao.jpg'); 
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain; /* Mantém a imagem inteira dentro do bloco */
+    
+        /* Ajuste a transparência: 0.1 é bem sutil, 1.0 é totalmente visível */
+            opacity: 0.1; 
+    
+        /* Joga a imagem para trás do texto */
+            z-index: 0; 
+        }
+
+        /* Garante que o texto fique acima da marca d'água */
+        .conteudo h2, .conteudo p {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banner com Divisão Real de 50% -->
+    <header class="banner">
+        <div class="coluna-esquerda">
+            <span>Mi</span>
+        </div>
+        <div class="coluna-direita">
+            <span>Auspedagem</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cadastrodono.html">Cadastro Dono</a></li>
+            <li><a href="cadastropet.html">Cadastro Pet</a></li>
+        </ul>
+    </nav>
+
+    <div class="conteudo">
+        <h2>Bem Vindo ao Serviço de Hospedagem de Pets!!!</h2>
+        <p></p>
+    </div>
+
+</body>
+</html>
